@@ -7,7 +7,7 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: update   # 개발 중에는 update 편함 (엔티티 변경 시 테이블 자동 반영)
+      ddl-auto: create   # 개발 중에는 update 편함 (엔티티 변경 시 테이블 자동 반영)
     properties:
       hibernate:
         format_sql: true

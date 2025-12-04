@@ -49,7 +49,7 @@ public class Member {
         String randomLoginId = "GUEST_" + System.currentTimeMillis();
         String randomPassword = "GUEST_PW_" + System.nanoTime();
         Email email = null;
-        String name = (guestName == null || guestName.isBlank()) ? "게스트" : "G-"+guestName;
+        String name = (guestName == null || guestName.isBlank()) ? "게스트" : "G-" + guestName;
         validateName(name);
         return new Member(randomLoginId, name, randomPassword, email, MemberType.GUEST);
     }
@@ -84,16 +84,12 @@ public class Member {
         }
     }
 
-    private static void validatePassword(String password) {
-        if (password == null || password.isBlank()) {
+    private static void validatePassword(String encodedPassword) {
+        if (encodedPassword == null || encodedPassword.isBlank()) {
             throw new IllegalArgumentException("비밀번호는 비어 있을 수 없습니다.");
         }
-        if (password.length() < 8 || password.length() > 20) {
-            throw new IllegalArgumentException("비밀번호는 8~20자여야 합니다.");
-        }
-        if (!password.matches("^(?=.*[A-Za-z])(?=.*\\d)(?=.*[!@#$%^&*()_+\\-=?]).+$")) {
-            throw new IllegalArgumentException("비밀번호는 영문, 숫자, 특수문자를 모두 포함해야 합니다.");
+        if (encodedPassword.length() > 100) {
+            throw new IllegalArgumentException("비밀번호 길이가 너무 깁니다.");
         }
     }
-
 }
