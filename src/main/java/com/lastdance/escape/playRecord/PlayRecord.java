@@ -1,7 +1,6 @@
 package com.lastdance.escape.playRecord;
 
-import com.lastdance.escape.member.Member;
-import com.lastdance.escape.problem.Problem;
+import com.lastdance.escape.member.domain.Member;
 import com.lastdance.escape.theme.Theme;
 import jakarta.persistence.*;
 import java.time.LocalDate;

@@ -1,6 +1,6 @@
 package com.lastdance.escape.member.controller;
 
-import com.lastdance.escape.member.MemberService;
+import com.lastdance.escape.member.service.MemberSignUpService;
 import com.lastdance.escape.member.dto.signUp.SignUpRequestDto;
 import com.lastdance.escape.member.dto.signUp.SignUpResponseDto;
 import lombok.RequiredArgsConstructor;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class MemberSignUpController {
 
-    private final MemberService memberService;
+    private final MemberSignUpService memberService;
 
     @PostMapping("/sign_up")
     public ResponseEntity<SignUpResponseDto> signUp(@RequestBody SignUpRequestDto signUpRequestDto){

@@ -1,6 +1,7 @@
-package com.lastdance.escape.member;
+package com.lastdance.escape.member.domain;
 
 import com.lastdance.escape.email.Email;
+import com.lastdance.escape.member.MemberType;
 import jakarta.persistence.*;
 import lombok.Getter;
 

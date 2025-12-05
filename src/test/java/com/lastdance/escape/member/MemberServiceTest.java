@@ -1,7 +1,10 @@
 package com.lastdance.escape.member;
 
+import com.lastdance.escape.member.domain.Member;
 import com.lastdance.escape.member.dto.signUp.SignUpRequestDto;
 import com.lastdance.escape.member.dto.signUp.SignUpResponseDto;
+import com.lastdance.escape.member.repository.MemberRepository;
+import com.lastdance.escape.member.service.MemberSignUpService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +18,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class MemberServiceTest {
 
     @Autowired
-    MemberService memberService;
+    MemberSignUpService memberService;
 
     @Autowired
     MemberRepository memberRepository;

@@ -19,8 +19,8 @@ logs/
 
 ### Spring Boot 환경 파일 (중요) ###
 # 로컬/개발 환경에서만 사용하는 값들 보호
-src/main/resources/application-local.yml
-src/main/resources/application-local.properties
+src/main/resources/application.yml
+src/main/resources/application.properties
 .env
 
 ### STS ###

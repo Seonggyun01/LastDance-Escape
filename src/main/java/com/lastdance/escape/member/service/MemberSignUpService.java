@@ -1,6 +1,8 @@
-package com.lastdance.escape.member;
+package com.lastdance.escape.member.service;
 
 import com.lastdance.escape.email.Email;
+import com.lastdance.escape.member.domain.Member;
+import com.lastdance.escape.member.repository.MemberRepository;
 import com.lastdance.escape.member.dto.signUp.SignUpRequestDto;
 import com.lastdance.escape.member.dto.signUp.SignUpResponseDto;
 import lombok.RequiredArgsConstructor;
@@ -11,7 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 @RequiredArgsConstructor
 @Transactional(readOnly = true)
-public class MemberService {
+public class MemberSignUpService {
     private final MemberRepository memberRepository;
     private final PasswordEncoder passwordEncoder;
 

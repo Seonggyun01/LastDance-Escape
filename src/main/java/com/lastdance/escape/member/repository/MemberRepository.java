@@ -1,5 +1,6 @@
-package com.lastdance.escape.member;
+package com.lastdance.escape.member.repository;
 
+import com.lastdance.escape.member.domain.Member;
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
