@@ -16,7 +16,8 @@ public class CorsConfig {
                 registry.addMapping("/**") // 전체 API 허용
                         .allowedOrigins(
                                 "http://localhost:3000",
-                                "http://54.180.66.229"
+                                "http://54.180.66.229",
+                                "https://last-dance-five.vercel.app"
                         )
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS")
                         .allowedHeaders("*")
